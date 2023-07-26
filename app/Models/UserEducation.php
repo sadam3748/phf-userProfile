@@ -1,20 +1,23 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class UserEducation extends Model
 {
-    use SoftDeletes;
-    protected $connection = 'phf';
-    protected $table = 'user_education';
+    use HasFactory;
 
-    protected $primaryKey = 'id';
+    protected $table = 'user_educations';
 
     protected $fillable = [
-        'user_id','education_level', 'obtain_marks','institute','passing_date','degree_image'
+        'user_id',
+        'education_level',
+        'obtain_marks',
+        'institute',
+        'total_marks',
+        'degree_image',
+        'passing_date',
     ];
-
 }

@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserEducationController;
+use App\Models\City;
+use App\Models\UserEducation;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,13 +24,18 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $user = Auth::user();
+    $cities = City::all();
+    $datenow = Carbon::now();
+    $ageallowed = $datenow->add(-18, 'year');
+    return view('dashboard', get_defined_vars());
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::resource('user-educations',  UserEducationController::class);
 });
 
 require __DIR__.'/auth.php';
