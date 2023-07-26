@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Preference;
+use App\Models\User;
+use App\Models\UserProfile;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\View\View;
 
 class UserPreferenceController extends Controller
 {
@@ -23,9 +28,11 @@ class UserPreferenceController extends Controller
         $preference->nursing_colleges= $request->nursing_colleges;
         $preference->user_id = Auth::user()->id;
         $preference->save();
+        return Redirect::route('preference-get');
+        return Redirect::route('preference');
 
-        $userPrefences = Preference::latest()->get();
-        return redirect()->route('preference');
+        // $userPrefences = Preference::latest()->get();
+        // return redirect()->route('preference');
         //  return view('preference.index', get_defined_vars());
 
         // return view('preference.index', get_defined_vars());
