@@ -21,8 +21,14 @@ class UserPreferenceController extends Controller
         ]);
         $preference = new Preference();
         $preference->nursing_colleges= $request->nursing_colleges;
-        $preference->user_id = Auth::user();
+        $preference->user_id = Auth::user()->id;
         $preference->save();
+
+        $userPrefences = Preference::latest()->get();
+        return redirect()->route('preference');
+        //  return view('preference.index', get_defined_vars());
+
+        // return view('preference.index', get_defined_vars());
     //    dd(preference);
         // Preference::create($input);
 

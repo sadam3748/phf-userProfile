@@ -11,13 +11,13 @@
                 <div class="form-group">
                     <label for="nursing-colleges">College Of Nursing</label>
                     <select class="custom-select mr-sm-2" name="nursing_colleges" required>
-                        <option value="{{__('matric')}}" >{{ __('CON GANGARAM HOSPITAL, LAHORE') }}</option>
-                        <option value="{{__('ics')}}" >{{ __('CON MAYO HOSPITAL, LAHORE') }}</option>
-                        <option value="{{__('fsc')}}" >{{ __('CON AMC, LGH, LAHORE') }}</option>
-                        <option value="{{__('fsc')}}" >{{ __('CON KHUSHAB') }}</option>
-                        <option value="{{__('fsc')}}" >{{ __('CON VEHARI') }}</option>
-                        <option value="{{__('fsc')}}" >{{ __('CON CHAKWAL') }}</option>
-                        <option value="{{__('fsc')}}" >{{ __('CON KASSUR') }}</option>
+                        <option value="CON GANGARAM HOSPITAL, LAHORE" >{{ __('CON GANGARAM HOSPITAL, LAHORE') }}</option>
+                        <option value="CON MAYO HOSPITAL, LAHORE" >{{ __('CON MAYO HOSPITAL, LAHORE') }}</option>
+                        <option value="CON AMC, LGH, LAHORE" >{{ __('CON AMC, LGH, LAHORE') }}</option>
+                        <option value="CON KHUSHAB" >{{ __('CON KHUSHAB') }}</option>
+                        <option value="CON VEHARI" >{{ __('CON VEHARI') }}</option>
+                        <option value="CON CHAKWAL" >{{ __('CON CHAKWAL') }}</option>
+                        <option value="CON KASSUR'" >{{ __('CON KASSUR') }}</option>
                     </select>
                 </div>
             </div>
