@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -61,4 +62,14 @@ function UPLOAD_FILE(object $file, string $path, $rename = true, bool $unlink = 
     }
 
     return false;
+}
+
+/**
+ * @param $date
+ * @param $days
+ * @return string
+ */
+function getDateFormat($date,$days=""): string
+{
+    return Carbon::parse($date)->addDays($days)->format('d M Y');
 }

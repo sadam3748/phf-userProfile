@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('total_marks')->nullable();
             $table->longText('degree_image')->nullable();
             $table->string('passing_date')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

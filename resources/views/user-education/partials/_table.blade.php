@@ -18,6 +18,7 @@
                     <th>Percent age</th>
                     <th>Completion Date</th>
                     <th>Image</th>
+                    <th>Created At</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -26,15 +27,34 @@
                     @foreach($userEducations as $userEducation)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$userEducation->education_level ?? '-----'}}</td>
+                            <td>{{ucfirst($userEducation->education_level) ?? '-----'}}</td>
                             <td>{{$userEducation->institute ?? '-----'}}</td>
                             <td>{{$userEducation->obtain_marks ?? '-----'}}</td>
                             <td>{{$userEducation->total_marks ?? '-----'}}</td>
-                            <td>{{$userEducation->total_marks ?? '-----'}}</td>
-                            <td>{{$userEducation->total_marks ?? '-----'}}</td>
-                            <td>{{$userEducation->passing_date ?? '-----'}}</td>
-                            <td>{{$userEducation->degree_image ?? '-----'}}</td>
-                            <td>Action</td>
+                            <td>
+                                @php
+                                    $percentage = ($userEducation->obtain_marks / $userEducation->total_marks) * 100
+                                @endphp
+                                {{ round($percentage) . "%" ?? '-----'}}
+                            </td>
+                            <td>{{getDateFormat($userEducation->passing_date) ?? '-----'}}</td>
+                            <td><a href="{{$userEducation->degree_image ?? '#'}}" target="_blank"><img src="{{$userEducation->degree_image ?? '-----'}}" alt=""></a></td>
+                            <td>{{getDateFormat($userEducation->created_at) ?? '-----'}}</td>
+                            <td>
+                                <div class="action-button">
+                                    <a href="javascript:void(0)" onclick="editEducation({{$userEducation->id}})" class="action-button-edit">
+                                        <img class="editDell" src="{{asset('images/edit_blue.svg')}}">
+                                    </a>
+                                    <a class="dropdown-item has-icon delete-confirm" href="javascript:void(0)" data-id={{ $userEducation->id }}>
+                                        <img class="editDell" src="{{asset('images/delete_forever.svg')}}">
+                                    </a>
+                                    <!-- Delete Form -->
+                                    <form class="d-none" id="delete_form_{{ $userEducation->id }}" action="{{ route('user-educations.destroy', $userEducation->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                     @endforeach
                 @endif
@@ -42,5 +62,15 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <div class="flex items-end gap-4">
+        <a href="{{route('dashboard')}}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+            {{ __('Previous') }}
+        </a>
+
+        <a href="{{route('user-experiences.index')}}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+            {{ __('Save & Continue') }}
+        </a>
     </div>
 </section>

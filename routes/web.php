@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserEducationController;
+use App\Http\Controllers\UserExperienceController;
 use App\Models\City;
 use App\Models\UserEducation;
 use Illuminate\Support\Carbon;
@@ -36,6 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user-educations',  UserEducationController::class);
+    Route::resource('user-experiences',  UserExperienceController::class);
 });
 
 require __DIR__.'/auth.php';
