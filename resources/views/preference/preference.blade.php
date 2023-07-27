@@ -11,7 +11,7 @@ tbody tr {
 <head>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 </head>
-    
+
 <section>
 <form action="{{ route('preference.store') }}" method="POST" class="mt-6 space-y-6">
     @csrf
@@ -31,12 +31,9 @@ tbody tr {
                 </div>
             </div>
         </div>
-        <div class="flex items-end gap-4">
-            <a href="{{route('dashboard')}}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                {{ __('Previous') }}
-            </a>
-            <x-primary-button>{{ __('Save Preference') }}</x-primary-button>
-        </div>
+    <div class="flex items-end gap-4">
+        <x-primary-button>{{ __('Save Preference') }}</x-primary-button>
+    </div>
     </form>
 
     <header>
@@ -65,7 +62,7 @@ tbody tr {
                     <form  action="{{ route('preference.destroy', $userPrefence->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    
+
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this preference?')">Delete</button>
 
                     </form>
@@ -78,7 +75,15 @@ tbody tr {
                 </tbody>
             </table>
         </div>
-    </div> 
+    </div>
+    <div class="flex items-end gap-4">
+        <a href="{{route('user-experiences.index')}}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+            {{ __('Previous') }}
+        </a>
+        <a href="#" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+            {{ __('Save & Continue') }}
+        </a>
+    </div>
 </section>
 
 <!-- Button to trigger the modal -->
@@ -133,7 +138,7 @@ tbody tr {
 		helper: fixHelperModified,
 		stop: updateIndex
 	}).disableSelection();
-	
+
 		$("tbody").sortable({
 		distance: 5,
 		delay: 100,

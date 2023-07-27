@@ -34,9 +34,9 @@ class UserPreferenceController extends Controller
     public function destroy($id)
     {
         $data = Preference::find($id);
-        
+
         if ($data) {
-            $data->delete();
+            $data->forceDelete();
         }
 
         return Redirect::route('preference.get');

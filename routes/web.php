@@ -40,13 +40,10 @@ Route::get('/dashboard', function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user-educations',  UserEducationController::class);
     Route::resource('user-experiences',  UserExperienceController::class);
+     Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference.get');
+     Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference.store');
+     Route::delete('preference-delete/{id}', [UserPreferenceController::class, 'destroy'])->name('preference.destroy');
 });
-    Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference.get');
-    Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference.store');
-    Route::delete('preference-delete/{id}', [UserPreferenceController::class, 'destroy'])->name('preference.destroy');
 
-
-
- });
 
 require __DIR__.'/auth.php';
