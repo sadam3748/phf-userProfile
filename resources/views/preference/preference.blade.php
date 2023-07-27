@@ -1,9 +1,18 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+tbody tr {
+  cursor: move;
+}
+  </style>
 
-
-
-
+<!------ Include the above in your HEAD tag ---------->
+<head>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+</head>
+    
 <section>
-<!-- <form method="post" action="{{ route('preference-store') }}" class="mt-6 space-y-6" enctype="multipart/form-data"> -->
 <form action="{{ route('preference-store') }}" method="POST" class="mt-6 space-y-6">
     @csrf
         <div class="row">
@@ -30,7 +39,6 @@
         </div>
     </form>
 
-
     <header>
         <h2 class="text-lg font-medium text-gray-900" style="color: black !important;">
        Preference List
@@ -39,7 +47,7 @@
 
     <div class="row">
         <div class="col-12">
-            <table id="userEducationTable" class="table table-striped table-bordered" style="width:100%">
+            <table id="myTable" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                 <tr>
                     <th>Sr.#</th>
@@ -50,7 +58,7 @@
                 @if(!empty($userPrefences))
                     @foreach($userPrefences as $userPrefence)
                         <tr>
-                            <td>{{$loop->iteration}}</td>
+                            <td class="index">{{$loop->iteration}}</td>
                             <td>{{$userPrefence->nursing_colleges ?? '-----'}}</td>
                         </tr>
                     @endforeach
@@ -60,4 +68,40 @@
             </table>
         </div>
     </div>
+
+    
 </section>
+
+
+<script>
+		var fixHelperModified = function(e, tr) {
+		var $originals = tr.children();
+		var $helper = tr.clone();
+		$helper.children().each(function(index) {
+			$(this).width($originals.eq(index).width())
+		});
+		return $helper;
+	},
+		updateIndex = function(e, ui) {
+			$('td.index', ui.item.parent()).each(function (i) {
+				$(this).html(i+1);
+			});
+			$('input[type=text]', ui.item.parent()).each(function (i) {
+				$(this).val(i + 1);
+			});
+		};
+
+	$("#myTable tbody").sortable({
+		helper: fixHelperModified,
+		stop: updateIndex
+	}).disableSelection();
+	
+		$("tbody").sortable({
+		distance: 5,
+		delay: 100,
+		opacity: 0.6,
+		cursor: 'move',
+		update: function() {}
+			});
+
+</script>
