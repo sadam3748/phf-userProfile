@@ -16,7 +16,7 @@
         <!-- DataTables CSS -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
         <style>
-            .text-gray-800,.text-gray-900{
+            .colorWhite{
                 color:#fff !important;
             }
             /* Hide the number input buttons */
@@ -49,6 +49,9 @@
                 margin: auto;
                 margin-top: 100px;
             }
+            tbody tr {
+                cursor: move;
+            }
         </style>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -77,6 +80,7 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- DataTables JS -->
@@ -85,7 +89,7 @@
         <script src="{{ asset('js/sweetalert.min.js') }}"></script>
         <script src="{{ asset('js/form.js') }}"></script>
 
-      
+
         <script>
             $(document).ready(function() {
                 $('#userEducationTable').DataTable();
@@ -227,7 +231,58 @@
                 })
             });
         </script>
-    
+
+        <script>
+            var fixHelperModified = function(e, tr) {
+                    var $originals = tr.children();
+                    var $helper = tr.clone();
+                    $helper.children().each(function(index) {
+                        $(this).width($originals.eq(index).width())
+                    });
+                    return $helper;
+                },
+                updateIndex = function(e, ui) {
+                    $('td.index', ui.item.parent()).each(function (i) {
+                        $(this).html(i+1);
+                    });
+                    $('input[type=text]', ui.item.parent()).each(function (i) {
+                        $(this).val(i + 1);
+                    });
+                };
+
+            $("#myTablePreference tbody").sortable({
+                helper: fixHelperModified,
+                stop: updateIndex
+            }).disableSelection();
+
+            $("tbody").sortable({
+                distance: 5,
+                delay: 100,
+                opacity: 0.6,
+                cursor: 'move',
+                update: function() {}
+            });
+
+
+
+
+
+            $(document).ready(function() {
+                // Show the confirmation modal when delete button is clicked
+                $('#deleteBtn').on('click', function() {
+                    $('#confirmationModal').modal('show');
+                });
+
+                // Handle the delete action when "Delete" is clicked in the confirmation modal
+                $('#confirmDeleteBtn').on('click', function() {
+                    // Perform the actual delete action here
+                    // You can use AJAX to send the delete request to the server
+
+                    // After the delete action is complete, hide the modal
+                    $('#confirmationModal').modal('hide');
+                });
+            });
+        </script>
 
     </body>
 </html>

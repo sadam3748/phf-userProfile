@@ -42,6 +42,7 @@ Route::get('/dashboard', function () {
     Route::resource('user-experiences',  UserExperienceController::class);
      Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference.get');
      Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference.store');
+     Route::post('preference-update-order', [UserPreferenceController::class, 'updateOrder']);
      Route::delete('preference-delete/{id}', [UserPreferenceController::class, 'destroy'])->name('preference.destroy');
 });
 

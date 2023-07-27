@@ -20,7 +20,7 @@ class UserEducationController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $userEducations = UserEducation::latest()->get();
+        $userEducations = UserEducation::where('user_id', Auth::id())->latest()->get();
         return view('user-education.index', get_defined_vars());
     }
 

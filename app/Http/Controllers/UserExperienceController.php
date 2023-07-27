@@ -20,7 +20,7 @@ class UserExperienceController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $userExperiences = UserExperience::latest()->get();
+        $userExperiences = UserExperience::where('user_id', Auth::id())->latest()->get();
         return view('user-experience.index', get_defined_vars());
     }
 
