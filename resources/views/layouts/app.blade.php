@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
         <!-- DataTables CSS -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
         <style>
@@ -83,6 +85,7 @@
         <script src="{{ asset('js/sweetalert.min.js') }}"></script>
         <script src="{{ asset('js/form.js') }}"></script>
 
+      
         <script>
             $(document).ready(function() {
                 $('#userEducationTable').DataTable();
@@ -224,5 +227,7 @@
                 })
             });
         </script>
+    
+
     </body>
 </html>

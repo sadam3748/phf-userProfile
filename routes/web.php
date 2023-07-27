@@ -3,8 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserEducationController;
 use App\Http\Controllers\UserExperienceController;
+use App\Http\Controllers\UserPreferenceController;
 use App\Models\City;
 use App\Models\UserEducation;
+use App\Models\Preference;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -32,12 +34,19 @@ Route::get('/dashboard', function () {
     return view('dashboard', get_defined_vars());
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user-educations',  UserEducationController::class);
     Route::resource('user-experiences',  UserExperienceController::class);
 });
+    Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference.get');
+    Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference.store');
+    Route::delete('preference-delete/{id}', [UserPreferenceController::class, 'destroy'])->name('preference.destroy');
+
+
+
+ });
 
 require __DIR__.'/auth.php';
