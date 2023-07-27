@@ -38,9 +38,9 @@ Route::get('/dashboard', function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user-educations',  UserEducationController::class);
-    Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference-get');
-    // Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference-store');
-    Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference-store');
+    Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference.get');
+    Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference.store');
+    Route::delete('preference-delete/{id}', [UserPreferenceController::class, 'destroy'])->name('preference.destroy');
 
 
 

@@ -28,24 +28,17 @@ class UserPreferenceController extends Controller
         $preference->nursing_colleges= $request->nursing_colleges;
         $preference->user_id = Auth::user()->id;
         $preference->save();
-        return Redirect::route('preference-get');
-        return Redirect::route('preference');
+        return Redirect::route('preference.get');
 
-        // $userPrefences = Preference::latest()->get();
-        // return redirect()->route('preference');
-        //  return view('preference.index', get_defined_vars());
+    }
+    public function destroy($id)
+    {
+        $data = Preference::find($id);
+        
+        if ($data) {
+            $data->delete();
+        }
 
-        // return view('preference.index', get_defined_vars());
-    //    dd(preference);
-        // Preference::create($input);
-
-
-        // $model = new YourModel();
-        // $model->column1 = $request->input('column1');
-        // $model->column2 = $request->input('column2');
-        // // Set other properties based on your table's columns
-
-        // // Save the data to the database
-        // $model->save();
+        return Redirect::route('preference.get');
     }
 }
