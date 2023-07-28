@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('user_preferences', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('sort_id')->nullable();
             $table->string('nursing_colleges')->nullable();
             $table->timestamps();
         });
