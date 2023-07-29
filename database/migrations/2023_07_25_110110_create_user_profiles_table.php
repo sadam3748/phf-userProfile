@@ -28,6 +28,7 @@ return new class extends Migration
             $table->longText('cnic_front_image')->nullable();
             $table->longText('cnic_back_image')->nullable();
             $table->longText('pnc_certificate_image')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

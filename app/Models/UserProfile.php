@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class UserProfile extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $table = 'user_profiles';
 
@@ -26,6 +27,7 @@ class UserProfile extends Model
         'domicile_image',
         'cnic_front_image',
         'cnic_back_image',
-        'pnc_certificate_image'
+        'pnc_certificate_image',
+        'deleted_at',
     ];
 }

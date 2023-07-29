@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserEducationController;
+use App\Http\Controllers\UserExperienceController;
 use App\Http\Controllers\UserPreferenceController;
 use App\Models\City;
 use App\Models\UserEducation;
@@ -38,12 +39,12 @@ Route::get('/dashboard', function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user-educations',  UserEducationController::class);
-    Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference.get');
-    Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference.store');
-    Route::delete('preference-delete/{id}', [UserPreferenceController::class, 'destroy'])->name('preference.destroy');
+    Route::resource('user-experiences',  UserExperienceController::class);
+     Route::get('preference', [UserPreferenceController::class, 'data_get'])->name('preference.get');
+     Route::post('preference-store', [UserPreferenceController::class, 'store'])->name('preference.store');
+     Route::post('preference-update-order', [UserPreferenceController::class, 'updateOrder']);
+     Route::delete('preference-delete/{id}', [UserPreferenceController::class, 'destroy'])->name('preference.destroy');
+});
 
-
-
- });
 
 require __DIR__.'/auth.php';

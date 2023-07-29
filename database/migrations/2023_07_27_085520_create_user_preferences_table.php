@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_educations', function (Blueprint $table) {
+        Schema::create('user_preferences', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('education_level')->nullable();
-            $table->string('obtain_marks')->nullable();
-            $table->string('institute')->nullable();
-            $table->string('total_marks')->nullable();
-            $table->longText('degree_image')->nullable();
-            $table->string('passing_date')->nullable();
+            $table->integer('order')->nullable();
+            $table->foreignId('nursing_college_id')->references('id')->on('nursing_colleges')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_educations');
+        Schema::dropIfExists('user_preferences');
     }
 };
