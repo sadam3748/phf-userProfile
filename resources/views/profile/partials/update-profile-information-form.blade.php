@@ -88,7 +88,7 @@
             </div>
             <div class="col-md-6">
                 <x-input-label for="cnic_expiry" :value="__('CNIC Expiry')" />
-                <x-text-input id="cnic_expiry" name="cnic_expiry" type="date" class="mt-1 block w-full" max="{{\Carbon\Carbon::parse($ageallowed)->format('Y-m-d')}}" min="1950-01-01" :value="old('cnic_expiry', (!empty($user->userProfile) ? $user->userProfile->cnic_expiry : null))" required autocomplete="cnic_expiry" />
+                <x-text-input id="cnic_expiry" name="cnic_expiry" type="date" class="mt-1 block w-full" min="1950-01-01" :value="old('cnic_expiry', (!empty($user->userProfile) ? $user->userProfile->cnic_expiry : null))" required autocomplete="cnic_expiry" />
                 <x-input-error class="mt-2" :messages="$errors->get('cnic_expiry')" />
             </div>
         </div>

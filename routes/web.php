@@ -28,13 +28,18 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     $user = Auth::user();
+
+    #check admin condition
+    if($user->role_id == 2)
+        return redirect()->route('admin.dashboard');
+
     $cities = City::all();
     $datenow = Carbon::now();
     $ageallowed = $datenow->add(-18, 'year');
     return view('dashboard', get_defined_vars());
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified','verify_if_user'])->name('dashboard');
 
- Route::middleware('auth')->group(function () {
+ Route::middleware(['auth','verify_if_user'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -48,3 +53,9 @@ Route::get('/dashboard', function () {
 
 
 require __DIR__.'/auth.php';
+
+/***************************************************** Admin *********************************************************/
+
+Route::prefix('admin')->group(base_path('routes/admin.php'));
+
+/***************************************************** Admin *********************************************************/

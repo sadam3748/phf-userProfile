@@ -1,0 +1,1078 @@
+@font-face{
+    font-family:'Poppins';
+    src:url('../fonts/poppins/400.eot');
+    src:url('../fonts/poppins/400.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/poppins/400.woff2') format('woff2'),
+    url('../fonts/poppins/400.woff') format('woff'),
+    url('../fonts/poppins/400.ttf') format('truetype'),
+    url('../fonts/poppins/400.svg#embed-poppins') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:'Poppins';
+    src:url('../fonts/poppins/700.eot');
+    src:url('../fonts/poppins/700.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/poppins/700.woff2') format('woff2'),
+    url('../fonts/poppins/700.woff') format('woff'),
+    url('../fonts/poppins/700.ttf') format('truetype'),
+    url('../fonts/poppins/700.svg#embed-poppins') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.navbar-brand, .display-1, .display-2, .display-3, .display-4, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", "Trebuchet MS", "PT Sans", "Helvetica Neue", "HelveticaNeue-Light", Helvetica, Arial, sans-serif!important;
+    letter-spacing: -0.04em!important;
+    font-weight: bold!important;
+}
+h1,h2,h3,h4,h5{
+    color: #02b875 !important;
+    /*color: #da4441 !important;*/
+}
+body{
+    font-family: "Segoe UI", "Trebuchet MS", "PT Sans", "Helvetica Neue", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+}
+/*a {*/
+/*    color: #c9c7c7!important;*/
+/*    text-decoration: none!important;*/
+/*    cursor: pointer!important;*/
+/*    outline: 0;*/
+/*}*/
+
+
+.toast{
+    display: none;
+}
+.red-text{
+    color: red;
+}
+.learn_more,
+.artist_login,
+.submitMyMusic,
+.auth_btn,
+.tellMeMore{
+    border-color: #02b875 !important;
+    background-color: #1f1f25 !important;
+    color: white!important;
+    text-align: center!important;
+    font-size:14px;
+    padding: 8px 8px 8px 8px !important;
+    /*padding: 8px 1.0rem 8px 1.0rem !important;*/
+    /*padding: 10px 1.5rem 10px 1.5rem !important;*/
+    white-space: nowrap!important;
+    vertical-align: middle!important;
+    /*box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3)!important;*/
+    border-radius: 500px!important;
+}
+.artist_login:hover,
+.artist_login:focus,
+.learn_more:hover,
+.learn_more:focus ,
+.tellMeMore:hover,
+.tellMeMore:focus,
+.submitMyMusic:hover,
+.submitMyMusic:focus,
+.auth_btn:hover,
+.auth_btn:focus
+{
+    color: rgba(255, 255, 255, 0.87) !important;
+    background-color: #02b875!important;
+    box-shadow: 0 10px 20px rgba(55, 206, 23, 0.72) !important;
+}
+
+#Login {
+    color: white;
+}
+
+.learn_more,
+.artist_login,
+.submitMyMusic,
+.auth_btn,
+.tellMeMore {
+    /*border: 2px solid rgba(0, 0, 0, 0.3);*/
+    /*margin-right: 27px !important;*/
+    /*font: 500 12px "Montserrat", sans-serif;*/
+    text-transform: uppercase;
+    /*letter-spacing: 1px;*/
+}
+.learnMore .tellMeMore {
+    margin-right: 27px !important;
+}
+.textCOlor{
+    color: white!important;
+}
+
+/*#for-artists .vc_col-lg-6 {*/
+/*    width: 60%;*/
+/*}*/
+#for-artists{
+    /*padding-bottom: 133px !important;*/
+}
+
+/*#for-artists .arTiSts{*/
+/*    margin-left: 150px !important;*/
+/*    padding-bottom: 45px;*/
+/*}*/
+/*#for-artists .padding-lg-140t {*/
+/*    padding-top: 109px!important;*/
+/*}*/
+/*#homeArtist{*/
+/*    padding: 0px;*/
+/*}*/
+/*#for-artists .vc_column-inner {*/
+/*    padding: 0px !important;*/
+/*}*/
+/*.tellMeMore {*/
+/*    background-color: #1f1f25 !important;*/
+/*    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3)!important;*/
+/*    border-radius: 500px!important;*/
+/*    color: white!important;*/
+/*    text-align: center!important;*/
+/*    white-space: nowrap!important;*/
+/*    vertical-align: middle!important;*/
+/*    border: 1px solid transparent!important;*/
+/*}*/
+/*.tellMeMore:hover{*/
+/*    box-shadow: inset 0 -10rem 0px rgba(158, 158, 158, 0.1)!important;*/
+/*}*/
+/*.textCOlor{*/
+/*    font-size: 1rem !important;*/
+/*    line-height: 1.25 !important;*/
+/*    padding-right: 1.5rem !important;*/
+/*    color: white !important;*/
+/*    padding-left: 1.5rem !important;*/
+/*}*/
+.btn[data-v-27387d44]:not(.cancelBtnStyle):not(.small){
+    padding: 12px 17px !important;
+    min-height: 0px;
+}
+.padding-lg-60b{
+    padding: 0px !important;
+}
+.mm-slideout{
+    padding-bottom: 70px!important;
+}
+.imageMobileContainer[data-v-6f53582b] {
+    height: 50vw!important;
+}
+
+.navbar-brand.md img, .navbar-brand.md svg{
+    max-height: 32px!important;
+    /*max-height: 45px!important;*/
+}
+
+
+.curator_container{
+    width: 100%!important;
+    height: 481px!important;
+}
+.curator_container .photo{
+    height: 200px!important;
+}
+.curator_container .photo img {
+    height: 90%!important;
+}
+.curator_container .content_artist {
+    width: 70%!important;
+}
+.curator_container .artist_footer {
+    width: 86%!important;
+    top: 69px!important;
+}
+.curator_container .artist_footer .siGnup1 {
+    padding: 10px 3.5rem 10px 3.5rem !important;
+}
+.curator_col{
+    /*width: 19.666667%!important;*/
+    margin-bottom: 20px!important;
+}
+
+.cardcontainer {
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    /*margin-left: auto;*/
+    margin-left: 95px;
+    margin-right: auto;
+    transition: 0.3s
+}
+
+.cardcontainer:hover {
+    box-shadow: 0 10px 20px rgba(55, 206, 23, 0.72) !important;
+}
+
+.photo {
+    height: 300px;
+    width: 100%
+}
+
+.photo img {
+    height: 80%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.content_artist {
+    width: 80%;
+    height: 155px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -20px
+}
+
+.photos {
+    width: 90px;
+    height: 30px;
+    background-color: #E74C3C;
+    color: white;
+    position: relative;
+    top: -30px;
+    padding-left: 10px;
+    font-size: 20px
+}
+
+.Iam_artist {
+    font-size: 18px;
+    position: relative;
+    top: 40px
+}
+
+.Iam_artist_detail {
+    position: relative;
+    font-size: 13px;
+    top: 37px;
+}
+
+
+.cardcontainer:hover>.photo {
+    /*height: 200px;*/
+    /*animation: move1 0.5s ease both*/
+}
+
+/*@keyframes move1 {*/
+/*    0% {*/
+/*        height: 300px;*/
+/*    }*/
+
+/*    100% {*/
+/*        height: 200px*/
+/*    }*/
+/*}*/
+
+.cardcontainer:hover>.content_artist {
+    /*height: 150px;*/
+}
+
+.artist_footer {
+    width: 80%;
+    height: 100px;
+    margin-left: auto;
+    text-align:center;
+    margin-right: auto;
+    /*background-color: white;*/
+    position: relative;
+    top: -15px
+}
+.cardsTep2{
+    box-shadow: 0 10px 20px rgb(128,128,128) !important;
+}
+.social_link{
+    margin-right:8px;
+}
+.sTep3,
+.sTep4
+{
+    width:80%!important
+}
+.sTep3 .tellMeMore{
+    margin-right: 8px;
+}
+
+.underline{
+    width: 48px;
+    height: 4px;
+    --bg-opacity: 1;
+    background-color: green;
+    border-radius: .125rem;
+}
+.sTep4 .music{
+    margin-top: 30px;
+}
+.Gary{
+    color: #da4441 !important;
+}
+.features_tAgs{
+    box-shadow: 0px 0px 3px 0px #00000017!important;
+    background-color: #f9f9f9!important;
+}
+
+/*check box field style*/
+
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 0;
+}
+
+ul.ks-cboxtags li {
+    display: inline;
+    height: 23px;
+}
+
+ul.ks-cboxtags li label {
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* -webkit-tap-highlight-color: transparent; */
+    color: #383760;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+ul.ks-cboxtags li label {
+    padding: 17px 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 23px;
+    margin: 0 12px 17px 0px;
+    background-color: #ebebef;
+    border: none;
+}
+
+
+
+ul.ks-cboxtags li input[type="checkbox"] {
+    display: absolute;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.features-box {
+    /*background-color: #fff;*/
+    /*box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);*/
+    /*margin: 25px 0;*/
+    /*border-radius: 20px;*/
+    padding: 25px 30px 10px 30px;
+}
+
+ul.ks-cboxtags {
+    margin: 0;
+}
+
+
+[type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after{
+    background-color: #02b875!important;
+}
+[type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::before, [type="radio"].with-gap:checked + span::after{
+    border: 2px solid #02b875!important;
+}
+.dropdown-content li > a{
+    color: #da4441!important;
+}
+.dropdown-content li > span{
+    color: black!important;
+}
+.siGnup1{
+    padding: 10px 5.5rem 10px 5.5rem !important;
+}
+.Login,
+.Rigister,
+.LeftSide,
+.RightSide
+{
+    padding: 10px 3.5rem 12px 3.5rem !important;
+}
+.social_label{
+    color: #02b875 !important;
+}
+
+[type="checkbox"].filled-in:checked + span:not(.lever)::after {
+    border: #02b875!important;
+    background-color: #02b875!important;
+}
+
+.record_label{
+    padding-left:40px !important;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: green !important;
+}
+.select-wrapper input.select-dropdown:focus{
+    border-bottom: 1px solid green!important;
+}
+input:not([type]):focus:not([readonly]), input[type="text"]:not(.browser-default):focus:not([readonly]), input[type="password"]:not(.browser-default):focus:not([readonly]), input[type="email"]:not(.browser-default):focus:not([readonly]), input[type="url"]:not(.browser-default):focus:not([readonly]), input[type="time"]:not(.browser-default):focus:not([readonly]), input[type="date"]:not(.browser-default):focus:not([readonly]), input[type="datetime"]:not(.browser-default):focus:not([readonly]), input[type="datetime-local"]:not(.browser-default):focus:not([readonly]), input[type="tel"]:not(.browser-default):focus:not([readonly]), input[type="number"]:not(.browser-default):focus:not([readonly]), input[type="search"]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid green!important;
+    box-shadow: 0 1px 0 0 green!important;
+}
+
+#animate .modal-content,
+#animatepolicy .modal-content{
+    top:150px !important;
+}
+
+img.center_icons {
+    width: 54%!important;
+    display: block!important;
+    /*margin-left: 18px!important;*/
+    /*margin-right: auto!important;*/
+    /*margin-left: auto!important;*/
+}
+.createPassword{
+    position:relative;
+}
+
+.create_password {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+}
+
+.app-header ~ .app-body,
+.app-header ~ .app-bodynew{
+    /*padding-bottom: 3.5rem !important;*/
+}
+.app-header ~ .app-bodynew {
+    padding-top: 3.5rem;
+}
+
+#phone{
+    /*border:none !important;*/
+    width: 80% !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#send_again,
+#count{
+    color: #02b875;
+    border-bottom: 2px solid #02b875;
+}
+.instagram_details .text-muted{
+    font-size:15px;
+}
+.welcome_UpcomingSounds .text-muted{
+    text-align: justify;
+}
+
+/*.welcome_video > video{*/
+/*    width:100% !important;*/
+/*    !*height:463px !important;*!*/
+/*    object-fit: cover;*/
+/*}*/
+
+.artists_welcome,.curators_welcome{
+    height: 491px;
+}
+
+.display-4{
+    font-size: 1.5rem !important;
+}
+.artists_welcome .text-black,
+.curators_welcome .text-black
+{
+    min-height: 80px!important;
+}
+.mouse {
+    position: relative;
+    bottom: 5.625rem;
+    /*top: 827px;*/
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+.mouse-icon {
+    height: 80px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    /*position: absolute;*/
+    top: 300px;
+    justify-content: center;
+    /*text-align: center;*/
+    /*margin: 0 auto;*/
+    display: flex;
+    /*display: initial;*/
+}
+ul:not(.browser-default) {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul:not(.browser-default) > li {
+    list-style-type: none;
+}
+
+.UScarousel{
+    background-repeat: no-repeat;
+    min-height: 412px;
+    background-size: cover;
+}
+.artists_welcome .text-md,
+.curators_welcome .text-md{
+    padding: 0 30px 0 30px;
+}
+
+.social_color{
+    background-color: #e26e6b;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+.SliderP{
+    color:white !important;
+    /* text-shadow: 1px 1px #ffffff; */
+}
+
+.tiktok_footer > svg{
+    color: #fff !important;
+}
+#loading {
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*height: 100vh;*/
+    /*z-index: 999999;*/
+}
+
+
+#loading {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+}
+
+#loading-image {
+    /*position: absolute;*/
+    /*top: 100px;*/
+    /*left: 240px;*/
+    z-index: 100;
+    /*height: 200px;*/
+    /*width:200px;*/
+    /*margin-top: 200px;*/
+    height: 232px;
+    width: 234px;
+    margin-top: 280px;
+    /* margin-top: 188px; */
+}
+
+svg.svg-inline--fa {
+    color: white;
+    font-size: 30px;
+    /* font-size: 15px; */
+}
+#footerIcons svg.svg-inline--fa {
+    color: white;
+    font-size: 15px;
+}
+
+
+#socialView_S{
+    justify-content: space-between !important;
+    align-items: center !important;
+    display: flex !important;
+}
+
+
+
+
+
+
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1506px) {
+
+    /* CSS */
+    .artists_welcome{
+        padding-bottom: 27px !important;
+    }
+}
+
+@media (min-width: 1281px) {
+
+    /* CSS */
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 915px) and (max-width: 1546px) {
+
+    /* CSS */
+.artist_login{
+    margin-right: 15px!important;
+}
+    .learnMore {
+        display: flex;
+    }
+    .sTep3 .tellMeMore {
+        margin-bottom: 15px;
+    }
+    /*.artists_welcome{*/
+    /*    padding-bottom: 27px !important;*/
+    /*}*/
+    .tasteMakerReg{ word-break: break-all;}
+    .mouse {
+        position: relative;
+        bottom: 5.625rem;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .mouse-icon {
+        /*position: absolute;*/
+        /*display: initial;*/
+    }
+    .mouse-icon {
+        top: 300px !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    /* CSS */
+.artist_login{
+    margin-right: 15px!important;
+}
+    .learnMore {
+        display: flex;
+    }
+    .sTep3 .tellMeMore {
+        margin-bottom: 15px;
+    }
+    .content_artist {
+        width: 80%!important;
+        top: -14px!important;
+    }
+    .Iam_artist {
+        font-size: 16px!important;
+        position: relative!important;
+        top: 35px!important;
+    }
+    .Iam_artist_detail {
+        position: relative!important;
+        font-size: 12px!important;
+        top: 30px!important;
+    }
+    .curator_container .artist_footer .siGnup1 {
+        padding: 10px 2.5rem 10px 2.5rem !important;
+    }
+    /*.welcome_video > video{*/
+    /*    width:100% !important;*/
+    /*}*/
+    .mouse {
+        position: relative;
+        bottom: 5.625rem;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .mouse-icon {
+        /*position: absolute;*/
+        /*display: initial;*/
+    }
+    .mouse-icon {
+        top: 300px !important;
+    }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* CSS */
+    .artist_login{
+        margin-right: 15px!important;
+    }
+    .learnMore {
+        display: flex;
+    }
+    .sTep2{
+        width:100%!important;
+    }
+    .sTep3{
+        width:100%!important;
+    }
+    .sTep4{
+        width:100%!important;
+    }
+    .sTep3 .tellMeMore {
+        margin-bottom: 15px;
+    }
+    .content_artist {
+        width: 80%!important;
+        top: -14px!important;
+    }
+    .Iam_artist {
+        font-size: 16px!important;
+        position: relative!important;
+        top: 35px!important;
+    }
+    .Iam_artist_detail {
+        position: relative!important;
+        font-size: 12px!important;
+        top: 30px!important;
+    }
+    .curator_container .artist_footer .siGnup1 {
+        padding: 10px 2.5rem 10px 2.5rem !important;
+    }
+    /*.welcome_video > video{*/
+    /*    width:100% !important;*/
+    /*}*/
+    .mouse {
+        position: relative;
+        bottom: 5.625rem;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .mouse-icon {
+        /*position: absolute;*/
+        /*display: initial;*/
+    }
+    .mouse-icon {
+        top: 300px !important;
+    }
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* CSS */
+    .artist_login{
+        margin-right: 15px!important;
+    }
+    .cardcontainer{
+        margin-bottom:30px!important;
+    }
+    .sTep3 .tellMeMore {
+        margin-bottom: 15px;
+    }
+    img.center_icons {
+        width: 30%!important;
+        display: block!important;
+        margin-left: 18px!important;
+        margin-right: auto!important;
+    }
+    .cardcontainer {
+        margin-left: auto!important;
+    }
+    /*.welcome_video > video{*/
+    /*    width:100% !important;*/
+    /*}*/
+    .mouse {
+        position: relative;
+        bottom: 5.625rem;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .mouse-icon {
+        /*position: absolute;*/
+        /*display: initial;*/
+    }
+    .artists_welcome .text-md,
+    .curators_welcome .text-md{
+        padding: 0;
+    }
+    .mouse-icon {
+        top: 300px !important;
+    }
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    #loading {
+        top: 38px !important;
+    }
+
+    /* CSS */
+    .tellMeMore{
+        display: inline-table !important;
+    }
+    #homeArtist{
+        float: right!important;
+        /*margin-right: -39px!important;*/
+    }
+    .learnMore{
+        text-align:center!important;
+    }
+    .cardcontainer{
+        margin-bottom:30px!important;
+    }
+    .sTep2{
+        width:100%!important;
+    }
+    .sTep3{
+        width:100%!important;
+    }
+    .sTep4{
+        width:100%!important;
+    }
+    .sTep3 .tellMeMore {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    img.center_icons {
+        width: 30%!important;
+        display: block!important;
+        margin-left: auto!important;
+        margin-right: auto!important
+    }
+    #snackbarError {
+        margin-left: 15px;
+        padding: 13px;
+        font-size: 14px;
+    }
+    .cardcontainer {
+         margin-left: auto!important;
+    }
+    /*.welcome_video > video{*/
+    /*    width:100% !important;*/
+    /*}*/
+    #socialMedia{
+        display: inline-grid!important;
+    }
+    .app-header ~ .app-body {
+        padding-top: 3.5rem;
+    }
+    .app-header ~ .app-bodynew {
+        padding-top: 3.5rem;
+    }
+    .videoWlcome {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        /*min-height: 100vh;*/
+        overflow: hidden;
+    }
+    .mouse {
+        display: block !important;
+    }
+    .mouse-wheel{
+        font-size:30px !important;
+    }
+    .flex, .probootstrap-section-half, .probootstrap-section-half .probootstrap-text {
+        display: -webkit-box!important;
+    }
+    .artists_welcome .text-md,
+    .curators_welcome .text-md{
+        padding: 0;
+    }
+    .mouse-icon {
+        top: 300px !important;
+    }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #loading {
+        top: 38px !important;
+    }
+
+    /* CSS */
+    .tellMeMore{
+        display: inline-table !important;
+    }
+    #homeArtist h2{
+        display: flex !important;
+    }
+
+    #homeArtist{
+        float: right!important;
+        /*margin-right: -39px!important;*/
+    }
+    .learnMore{
+        text-align:center!important;
+    }
+    .learnMore .tellMeMore {
+        margin-right: 1px !important;
+        font-size: 12px;
+    }
+    a.button.transparent.learn_more.tellMeMore {
+        font-size: 10px!important;
+    }
+    .cardcontainer{
+        margin-bottom:30px!important;
+    }
+    .sTep2{
+        width:100%!important;
+    }
+    .sTep3{
+        width:100%!important;
+    }
+    .sTep4{
+        width:100%!important;
+    }
+    .sTep3 .tellMeMore {
+        margin-right: 9px;
+        margin-bottom: 15px;
+    }
+    .record_label{
+        padding:0px !important;
+    }
+    .tellMeMore{
+        padding: 10px 10px 10px 10px !important;
+    }
+    .learn_more, .artist_login, .submitMyMusic, .auth_btn {
+        padding: 10px 3.5rem 12px 3.5rem !important;
+        /*padding: 8px 8px 8px 8px !important;*/
+        margin-right: 6px !important;
+        /*padding: 10px 1rem 10px 1rem !important;*/
+        /*margin-right: 0px !important;*/
+        /*padding: 10px 2.5rem 10px 2.5rem !important;*/
+    }
+    img.center_icons {
+        width: 30%!important;
+        display: block!important;
+        margin-left: auto!important;
+        margin-right: auto!important
+    }
+    .app-header ~ .app-body,
+    .app-header ~ .app-bodynew{
+        /*padding-bottom: 0.5rem !important;*/
+    }
+    .app-header ~ .app-body {
+        /*padding-top: 7rem;*/
+    }
+    .app-header ~ .app-bodynew {
+        padding-top: 3.5rem;
+    }
+    .videoWlcome {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        /*min-height: 100vh;*/
+        overflow: hidden;
+    }
+    element.style {
+    }
+    #snackbarError {
+        margin-left: 15px;
+        padding: 4px;
+        font-size: 14px;
+    }
+    .cardcontainer {
+        margin-left: auto!important;
+    }
+    .tastemakers_signup{
+        font-size: 10px !important;
+    }
+    #Login{
+        font-size: 10px !important;
+    }
+    .snackbarError{
+        top:113px !important;
+    }
+    .welcome_video > video{
+        /*width:100% !important;*/
+    }
+    /*#CuHome{*/
+    /*    background-position: inherit !important;*/
+    /*}*/
+    /*#ArHome{*/
+    /*    background-position: 100% !important;*/
+    /*}*/
+    #socialMedia{
+        display: inline-grid!important;
+    }
+    .mouse {
+        display: block !important;
+    }
+    .display-4 {
+        font-size: 1.2rem !important;
+        /*font-size: 1.5rem !important;*/
+    }
+    .mouse-wheel{
+        font-size:30px !important;
+    }
+    .mouse {
+        position: relative;
+        bottom: 3.625rem;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .mouse-icon {
+        /*position: absolute;*/
+        /*display: initial;*/
+    }
+    .artists_welcome .text-md,
+    .curators_welcome .text-md
+    {
+        padding: 0;
+    }
+    .welcome_video > video {
+        /*left: 350px !important;*/
+        /*left: 440px !important;*/
+        /*left: 600px !important;*/
+    }
+    .mouse-icon {
+        top: 280px !important;
+    }
+}

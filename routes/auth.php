@@ -35,6 +35,16 @@ Route::middleware('guest')->group(function () {
                 ->name('password.store');
 });
 
+# Admin login
+Route::get('/admin/login', [AuthenticatedSessionController::class, 'createAdmin'])
+    ->middleware('guest')
+    ->name('admin.login');
+
+Route::get('/admin', function(){
+    return redirect()->route("admin.login");
+});
+# Admin login
+
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', EmailVerificationPromptController::class)
                 ->name('verification.notice');

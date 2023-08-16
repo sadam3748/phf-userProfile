@@ -49,7 +49,7 @@
                 margin: auto;
                 margin-top: 100px;
             }
-            tbody tr {
+            #myTablePreference tbody tr {
                 cursor: move;
             }
         </style>
@@ -188,7 +188,7 @@
                             $('#from_date').val(response.experience.from_date);
                             $('#to_date').val(response.experience.to_date);
 
-                            if (response.experience.is_working === 'on') {
+                            if (response.experience.is_working === '1') {
                                 $('#is_working').prop('checked', true);
                             } else {
                                 $('#is_working').prop('checked', false);
