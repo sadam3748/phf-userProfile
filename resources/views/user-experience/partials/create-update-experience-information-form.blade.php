@@ -56,7 +56,7 @@
             <div class="col-md-6">
                 <div class="custom-control custom-checkbox">
                     <x-input-label for="is_working" :value="__('Currently Working')" />
-                    <input type="checkbox" id="is_working" name="is_working" class="">
+                    <input type="checkbox" id="is_working" name="is_working" class="" value="1">
                 </div>
             </div>
         </div>

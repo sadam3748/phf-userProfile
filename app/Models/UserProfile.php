@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class UserProfile extends Model
@@ -30,4 +32,28 @@ class UserProfile extends Model
         'pnc_certificate_image',
         'deleted_at',
     ];
+
+    /**
+     * @return BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
+
+    /**
+     * @return HasOne
+     */
+    public function domicileCity(): HasOne
+    {
+        return $this->hasOne(City::class,'id','domicile');
+    }
+
+    /**
+     * @return HasOne
+     */
+    public function city(): HasOne
+    {
+        return $this->hasOne(City::class,'id','city_of_residence');
+    }
 }
